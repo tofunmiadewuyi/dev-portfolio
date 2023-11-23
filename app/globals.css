@@ -16,12 +16,68 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* body {
+ 
+} */
+
+.heroh1 {
+  text-wrap: balance;
+}
+
+@keyframes roundBox {
+  0% {
+    transform: translateX(0) translateY(-10%);
+  }
+
+  25% {
+    transform: translateX(40%) translateY(40%);
+  }
+
+  50% {
+    transform: translateX(0) translateY(90%);
+  }
+
+  75% {
+    transform: translateX(-40%) translateY(40%);
+  }
+
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes slideLR {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20%);
+  }
+
+  75% {
+    transform: translateX(-20%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+
+}
+
+.image-bg-blur{
+  animation: roundBox 4s ease-in-out infinite;
+}
+
+.image-bg-blur1{
+  animation: roundBox 4s ease-in-out 2s infinite;
+}
+
+.card-container {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .card-container {
+    max-width: calc(50% - 10px);
+  }
 }
