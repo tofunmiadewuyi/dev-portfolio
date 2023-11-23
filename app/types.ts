@@ -8,3 +8,10 @@ export type CardType = {
     type: string
     shadow: string
   }
+
+export type Project = {
+    title: string
+    desc: string
+    liveurl: string
+    image: StaticImageData
+}

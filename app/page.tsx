@@ -1,14 +1,10 @@
 import { BlackButton, WhiteButton } from './ui/button'
-import { DesignIcon, GitHubIcon, BrushIcon, ExpenseIcon, TodoIcon, FoodIcon } from './icons'
-import artinst from '@/public/images/artinst-full.png'
-import fuud from '@/public/images/fuud.png'
-import expense from '@/public/images/expense.png'
-import todo from '@/public/images/todo.png'
+import { DesignIcon, GitHubIcon } from './icons'
 import Stack from './ui/stack'
 import Card from './ui/card'
 import Footer from './ui/footer'
-import { CardType } from './types'
 import Contact from './ui/contact'
+import {cards} from './data'
 
 export default function Home() {
   return (
@@ -34,53 +30,13 @@ export default function Home() {
           <Stack/>
         </div>
         <div className='body w-full flex flex-wrap gap-5'>
-          <Card info={card1}/>
-          <Card info={card2}/>
-          <Card info={card3}/>
-          <Card info={card4}/>
+          {cards.map((card,index) => {
+            return <Card key={index} info={card} />
+          })}
         </div>
-        {/* <Contact/> */}
       </div>
       <Contact/>
       <Footer/>
     </main>
   )
 }
-
-
-const card1: CardType = {
-  title: 'Artinst',
-  desc: 'Discover popular artworks, by famous artists or by mediums.',
-  icon: <BrushIcon/>,
-  image: artinst,
-  type: 'desktop',
-  shadow: '#302103',
-}
-
-const card2: CardType = {
-  title: 'Expense Management',
-  desc: 'A very simple app that adds up all your expenses.',
-  icon: <ExpenseIcon/>,
-  image: expense,
-  type: 'mobile',
-  shadow: '#A2C880'
-}
-
-const card3: CardType = {
-  title: 'To-do',
-  desc: 'Single page, no frills, focus on your tasks and get them done.',
-  icon: <TodoIcon/>,
-  image: todo,
-  type: 'mobile',
-  shadow: '#A2C880'
-}
-
-const card4: CardType = {
-  title: 'Fuud',
-  desc: 'Find fun recipes for meals from around the world.',
-  icon: <FoodIcon/>,
-  image: fuud,
-  type: 'desktop',
-  shadow: '#38CFBB'
-}
-
