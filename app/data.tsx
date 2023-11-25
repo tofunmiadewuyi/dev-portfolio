@@ -39,7 +39,7 @@ export const cards: CardType[] = [
       title: data[0].title,
       desc: data[0].desc,
       url: data[0].liveurl,
-      icon: <ExpenseIcon/>,
+      icon: <BrushIcon/>,
       image: data[0].image,
       type: 'desktop',
       shadow: '#A2C880'
