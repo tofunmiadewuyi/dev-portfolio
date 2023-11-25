@@ -12,7 +12,7 @@ export default function Stack() {
             <TypescriptIcon/>
             <NextJsIcon/>
             <ReactIcon/>
-            <CSSIcon/>
+            {/* <CSSIcon/> */}
             <TailwindIcon/>
           </div>
         </div>
