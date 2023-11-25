@@ -22,7 +22,7 @@ export const data:Project[] = [
     {
     title: 'To-do',
     desc: 'Single page, no frills, focus on your tasks and get them done.',
-    liveurl: 'https://https://to-do.tofunmiadewuyi.repl.co/',
+    liveurl: 'https://to-do.tofunmiadewuyi.repl.co/',
     image: todo
     },
     {
@@ -38,6 +38,7 @@ export const cards: CardType[] = [
     {
       title: data[0].title,
       desc: data[0].desc,
+      url: data[0].liveurl,
       icon: <ExpenseIcon/>,
       image: data[0].image,
       type: 'desktop',
@@ -46,6 +47,7 @@ export const cards: CardType[] = [
     {
       title: data[1].title,
       desc: data[1].desc,
+      url: data[1].liveurl,
       icon: <ExpenseIcon/>,
       image: data[1].image,
       type: 'mobile',
@@ -54,6 +56,7 @@ export const cards: CardType[] = [
     {
       title: data[2].title,
       desc: data[2].desc,
+      url: data[2].liveurl,
       icon: <TodoIcon/>,
       image: data[2].image,
       type: 'mobile',
@@ -62,6 +65,7 @@ export const cards: CardType[] = [
     {
       title: data[3].title,
       desc: data[3].desc,
+      url: data[3].liveurl,
       icon: <FoodIcon/>,
       image: data[3].image,
       type: 'desktop',

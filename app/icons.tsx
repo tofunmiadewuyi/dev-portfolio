@@ -30,22 +30,23 @@ export const LogoIcon = () => {
   />
 }
 
-export const GitHubIcon = ({color}: {color: string}) => {
+export const GitHubIcon = ({color, size}: {color: string, size?: number}) => {
+  const returnSize:number = size || 20
     if (color === 'white') {
         return <Image
         src={GitHubWhite}
         alt="github white logo"
-        width={20}
-        height={20}
+        width={returnSize}
+        height={returnSize}
         priority
       />
     }
-    else if (color === 'black') {
+    if (color === 'black') {
         return <Image
         src={GitHubBlack}
         alt="github black logo"
-        width={20}
-        height={20}
+        width={returnSize}
+        height={returnSize}
         priority
       />
     }

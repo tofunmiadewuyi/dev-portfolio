@@ -3,11 +3,11 @@ import { CardType } from "../types"
 import Link from "next/link";
 
 export default function Card({info}: {info: CardType}) {
-    const {title, desc, icon, image, type, shadow} = info
+    const {title, desc, icon, image, type, shadow, url} = info
     const movingBlur = type === 'mobile' ? 'image-bg-blur' : 'image-bg-blur1';
     return (
         <article className="card-container w-full shadow-card rounded-[20px] border border-myblack/5 overflow-hidden hover:scale-102 hover:cursor-pointer transition duration-300 ease-in-out group">
-            <Link href={`/project/${title}`}>
+            <Link href={url} target="_blank">
             <div className="image relative w-full h-[240px] xl:h-[310px] bg-card overflow-hidden" style={{boxShadow: '4px 4px 4px 0px rgba(255, 255, 255, 0.25) inset'}}> 
                 <span className="absolute z-[1] w-full overflow-hidden rounded-e[10px] top-0 left-0 opacity-20"><ImageBlurBg fill={shadow}radius='100' blur={movingBlur}/></span>
                 <span className="absolute justify-center w-full p-10 top-0 left-0 flex z-10"
@@ -34,6 +34,8 @@ export default function Card({info}: {info: CardType}) {
 //#161616
 //#FCEED2
 //#302103
+
+// using routes and pages <Link href={`/project/${title}`}>...</Link>
 
 
 function ImageBlurBg({fill, radius, blur}:{fill:string, radius:string, blur:string}) {
