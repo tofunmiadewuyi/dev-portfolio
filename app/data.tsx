@@ -22,7 +22,7 @@ export const data:Project[] = [
     {
     title: 'To-do',
     desc: 'Single page, no frills, focus on your tasks and get them done.',
-    liveurl: 'https://to-do.tofunmiadewuyi.repl.co/',
+    liveurl: 'https://to-do-phi-lac.vercel.app/',
     image: todo
     },
     {
