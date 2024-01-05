@@ -15,8 +15,8 @@ export const data:Project[] = [
     },
     {
     title: 'Expense Management',
-    desc: 'A very simple app that adds up all your expenses.',
-    liveurl: 'https://expensemanagement.tofunmiadewuyi.repl.co/',
+    desc: 'A super simple app that adds up all your expenses.',
+    liveurl: 'https://expensemanagement-beta.vercel.app/',
     image: expense
     },
     {
